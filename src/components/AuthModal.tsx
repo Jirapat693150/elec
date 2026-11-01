@@ -4,14 +4,16 @@ import { X, Check, UserPlus, Shield } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { UserProfile, Language } from '../types';
 
-interface GoogleAuthModalProps {
+export interface AuthModalProps {
   isOpen: boolean;
   onClose: () => void;
   onSuccess: (user: UserProfile) => void;
   lang: Language;
 }
 
-export const GoogleAuthModal: React.FC<GoogleAuthModalProps> = ({
+export type GoogleAuthModalProps = AuthModalProps;
+
+export const AuthModal: React.FC<AuthModalProps> = ({
   isOpen,
   onClose,
   onSuccess,
@@ -242,3 +244,6 @@ export const GoogleAuthModal: React.FC<GoogleAuthModalProps> = ({
     </AnimatePresence>
   );
 };
+
+// Export backward-compatible alias
+export const GoogleAuthModal = AuthModal;

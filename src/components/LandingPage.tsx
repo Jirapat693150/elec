@@ -12,8 +12,8 @@ import {
   CheckCircle2,
   ArrowRight
 } from 'lucide-react';
-import { LightBulbHero } from './LightBulbHero';
-import { LiveCalculatorPreview } from './LiveCalculatorPreview';
+import { HeroLightBulb } from './HeroLightBulb';
+import { EnergyCalculator } from './EnergyCalculator';
 import { UserProfile, Language } from '../types';
 import { TRANSLATIONS } from '../utils/translations';
 
@@ -82,7 +82,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
 
           {/* Center Light Bulb (Vibrant Yellow Secondary Illumination) & Google Login CTA */}
           <div className="w-full mt-3">
-            <LightBulbHero
+            <HeroLightBulb
               isDark={isDark}
               onToggleTheme={onToggleTheme}
               lang={lang}
@@ -124,7 +124,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       </section>
 
       {/* LIVE QUICK CALCULATOR TEASER */}
-      <LiveCalculatorPreview
+      <EnergyCalculator
         lang={lang}
         gridRate={gridRate}
         onLaunchDashboard={onLaunchDashboard}

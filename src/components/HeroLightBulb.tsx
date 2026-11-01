@@ -4,7 +4,7 @@ import { Sparkles, Moon, Sun, ArrowRight, ShieldCheck, CheckCircle2 } from 'luci
 import { UserProfile, Language } from '../types';
 import { TRANSLATIONS } from '../utils/translations';
 
-interface LightBulbHeroProps {
+export interface HeroLightBulbProps {
   isDark: boolean;
   onToggleTheme: () => void;
   lang: Language;
@@ -14,7 +14,9 @@ interface LightBulbHeroProps {
   onSignOut: () => void;
 }
 
-export const LightBulbHero: React.FC<LightBulbHeroProps> = ({
+export type LightBulbHeroProps = HeroLightBulbProps;
+
+export const HeroLightBulb: React.FC<HeroLightBulbProps> = ({
   isDark,
   onToggleTheme,
   lang,
@@ -538,3 +540,6 @@ export const LightBulbHero: React.FC<LightBulbHeroProps> = ({
     </div>
   );
 };
+
+// Export backward-compatible alias
+export const LightBulbHero = HeroLightBulb;

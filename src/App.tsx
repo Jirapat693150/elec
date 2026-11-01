@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar } from './components/Navbar';
-import { LandingPage } from './components/LandingPage';
-import { EnergyDashboard } from './components/EnergyDashboard';
-import { GoogleAuthModal } from './components/GoogleAuthModal';
+import { Navbar, LandingPage, EnergyDashboard, AuthModal } from './components';
 import { ThemeMode, Language, Appliance, UserProfile } from './types';
 import { TRANSLATIONS } from './utils/translations';
 
@@ -270,7 +267,7 @@ export default function App() {
       </div>
 
       {/* Google Authentication Dialog Modal */}
-      <GoogleAuthModal
+      <AuthModal
         isOpen={isGoogleModalOpen}
         onClose={() => setIsGoogleModalOpen(false)}
         onSuccess={handleGoogleSuccess}

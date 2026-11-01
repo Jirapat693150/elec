@@ -4,13 +4,15 @@ import { Zap, ArrowRight } from 'lucide-react';
 import { Language } from '../types';
 import { TRANSLATIONS } from '../utils/translations';
 
-interface LiveCalculatorPreviewProps {
+export interface EnergyCalculatorProps {
   lang: Language;
   gridRate: number;
   onLaunchDashboard: () => void;
 }
 
-export const LiveCalculatorPreview: React.FC<LiveCalculatorPreviewProps> = ({
+export type LiveCalculatorPreviewProps = EnergyCalculatorProps;
+
+export const EnergyCalculator: React.FC<EnergyCalculatorProps> = ({
   lang,
   gridRate,
   onLaunchDashboard,
@@ -192,3 +194,6 @@ export const LiveCalculatorPreview: React.FC<LiveCalculatorPreviewProps> = ({
     </section>
   );
 };
+
+// Export backward-compatible alias
+export const LiveCalculatorPreview = EnergyCalculator;
