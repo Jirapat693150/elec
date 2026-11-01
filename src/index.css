@@ -1,0 +1,224 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Montserrat', 'Prompt', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Subtle soft black text shadow for enhanced legibility and bold crispness */
+.text-drop-subtle {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.14), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.dark .text-drop-subtle {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Tactile 3D Dimensional Buttons */
+.btn-tactile {
+  transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 3px 0 0 rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.btn-tactile:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.12), 0 6px 16px rgba(0, 0, 0, 0.07);
+}
+.btn-tactile:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Primary Accent Button: Vivid Sky Blue (#0284C7 / #0EA5E9) with 3D Bevel Depth */
+.btn-tactile-sky {
+  transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
+  background: linear-gradient(180deg, #38bdf8 0%, #0284c7 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 3.5px 0 0 #0369a1, 0 6px 18px rgba(14, 165, 233, 0.38);
+  color: #ffffff;
+}
+.btn-tactile-sky:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(180deg, #7dd3fc 0%, #0284c7 100%);
+  box-shadow: 0 4.5px 0 0 #0369a1, 0 8px 22px rgba(14, 165, 233, 0.48);
+}
+.btn-tactile-sky:active {
+  transform: translateY(2.5px);
+  box-shadow: 0 1px 0 0 #0369a1, 0 2px 6px rgba(14, 165, 233, 0.25);
+}
+
+/* Secondary Button: Rich Blue / Azure */
+.btn-tactile-blue {
+  transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
+  background: linear-gradient(180deg, #3b82f6 0%, #1d4ed8 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 3.5px 0 0 #1e3a8a, 0 6px 18px rgba(37, 99, 235, 0.35);
+  color: #ffffff;
+}
+.btn-tactile-blue:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(180deg, #60a5fa 0%, #1d4ed8 100%);
+  box-shadow: 0 4.5px 0 0 #1e3a8a, 0 8px 22px rgba(37, 99, 235, 0.42);
+}
+.btn-tactile-blue:active {
+  transform: translateY(2.5px);
+  box-shadow: 0 1px 0 0 #1e3a8a, 0 2px 6px rgba(37, 99, 235, 0.25);
+}
+
+/* Vibrant Yellow Tactile Button (#F59E0B / #FBBF24) */
+.btn-tactile-yellow {
+  transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
+  background: linear-gradient(180deg, #fbbf24 0%, #f59e0b 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 3.5px 0 0 #b45309, 0 6px 18px rgba(245, 158, 11, 0.38);
+  color: #0f172a;
+}
+.btn-tactile-yellow:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(180deg, #fde047 0%, #f59e0b 100%);
+  box-shadow: 0 4.5px 0 0 #b45309, 0 8px 22px rgba(245, 158, 11, 0.45);
+}
+.btn-tactile-yellow:active {
+  transform: translateY(2.5px);
+  box-shadow: 0 1px 0 0 #b45309, 0 2px 6px rgba(245, 158, 11, 0.25);
+}
+
+/* Eggshell White Minimalist Surface Button with 3D Bevel */
+.btn-tactile-eggshell {
+  transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
+  background: #FFFDF9;
+  border: 1px solid #e7e5e0;
+  border-top: 1px solid #ffffff;
+  box-shadow: 0 3px 0 0 #d6d3cd, 0 5px 14px rgba(0, 0, 0, 0.05);
+}
+.btn-tactile-eggshell:hover {
+  transform: translateY(-1px);
+  background: #ffffff;
+  border-color: #d6d3cd;
+  box-shadow: 0 4px 0 0 #b8b4ab, 0 7px 18px rgba(0, 0, 0, 0.08);
+}
+.btn-tactile-eggshell:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 0 #d6d3cd, 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.dark .btn-tactile-eggshell {
+  background: #1c1c22;
+  border: 1px solid #2e2e38;
+  border-top: 1px solid #3e3e4a;
+  box-shadow: 0 3px 0 0 #0d0d11, 0 5px 14px rgba(0, 0, 0, 0.35);
+}
+.dark .btn-tactile-eggshell:hover {
+  background: #23232b;
+  box-shadow: 0 4px 0 0 #0d0d11, 0 7px 18px rgba(0, 0, 0, 0.4);
+}
+.dark .btn-tactile-eggshell:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 0 #0d0d11, 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Vibrant Yellow Secondary Illumination & Sparkling Rays keyframes */
+@keyframes sparkle-rotate-yellow {
+  0% {
+    transform: rotate(0deg) scale(0.92);
+    opacity: 0.75;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.14);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(0.92);
+    opacity: 0.75;
+  }
+}
+
+@keyframes ray-pulse-yellow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes warm-breath-yellow {
+  0%, 100% {
+    opacity: 0.58;
+    transform: scale(0.97);
+    filter: blur(48px);
+  }
+  50% {
+    opacity: 0.92;
+    transform: scale(1.04);
+    filter: blur(60px);
+  }
+}
+
+.animate-sparkle-yellow {
+  animation: sparkle-rotate-yellow 7s linear infinite;
+}
+
+.animate-ray-yellow {
+  animation: ray-pulse-yellow 3.5s ease-in-out infinite;
+}
+
+.animate-warm-glow-yellow {
+  animation: warm-breath-yellow 4s ease-in-out infinite;
+}
+
+/* Blue Sparkling Rays and Illumination keyframes */
+@keyframes sparkle-rotate-blue {
+  0% {
+    transform: rotate(0deg) scale(0.92);
+    opacity: 0.7;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.12);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg) scale(0.92);
+    opacity: 0.7;
+  }
+}
+
+@keyframes ray-pulse-blue {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes warm-breath-blue {
+  0%, 100% {
+    opacity: 0.55;
+    transform: scale(0.97);
+    filter: blur(48px);
+  }
+  50% {
+    opacity: 0.88;
+    transform: scale(1.03);
+    filter: blur(58px);
+  }
+}
+
+.animate-sparkle-blue {
+  animation: sparkle-rotate-blue 7s linear infinite;
+}
+
+.animate-ray-blue {
+  animation: ray-pulse-blue 3.5s ease-in-out infinite;
+}
+
+.animate-warm-glow-blue {
+  animation: warm-breath-blue 4s ease-in-out infinite;
+}

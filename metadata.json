@@ -1,0 +1,6 @@
+{
+  "name": "Power Profiles - Energy Dashboard & Calculator",
+  "description": "โมเดิร์นแลนดิ้งเพจและแดชบอร์ดคำนวณค่าไฟฟ้า พร้อมหลอดไฟปรับแสงตามโหมดสว่าง-มืดและระบบล็อกอิน Google Account",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
